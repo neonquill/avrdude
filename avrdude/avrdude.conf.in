@@ -16722,6 +16722,103 @@ part
     ;
 ;
 
+#------------------------------------------------------------
+# ATXMEGA16D4
+#------------------------------------------------------------
+
+part
+    id		= "x16d4";
+    desc	= "ATXMEGA16D4";
+    signature	= 0x1e 0x94 0x42;
+    has_jtag	= yes;
+    has_pdi	= yes;
+    nvm_base	= 0x01c0;
+
+    memory "eeprom"
+        size		= 0x0400;
+        offset		= 0x08c0000;
+        page_size	= 0x20;
+        readsize	= 0x100;
+    ;
+
+    memory "application"
+        size		= 0x00004000;
+        offset		= 0x0800000;
+        page_size	= 0x100;
+        readsize	= 0x100;
+    ;
+
+    memory "apptable"
+        size		= 0x00001000;
+        offset		= 0x00803000;
+        page_size	= 0x100;
+        readsize	= 0x100;
+    ;
+
+    memory "boot"
+        size		= 0x00001000;
+        offset		= 0x00804000;
+        page_size	= 0x100;
+        readsize	= 0x100;
+    ;
+
+    memory "flash"
+        size		= 0x00005000;
+        offset		= 0x0800000;
+        page_size	= 0x100;
+        readsize	= 0x100;
+    ;
+
+    memory "prodsig"
+        size		= 0x200;
+        offset		= 0x8e0200;
+        page_size	= 0x100;
+        readsize	= 0x100;
+    ;
+
+    memory "usersig"
+        size		= 0x200;
+        offset		= 0x8e0400;
+        page_size	= 0x100;
+        readsize	= 0x100;
+    ;
+
+    memory "signature"
+        size		= 3;
+        offset		= 0x1000090;
+    ;
+
+    memory "fuse0"
+        size		= 1;
+        offset		= 0x8f0020;
+    ;
+
+    memory "fuse1"
+        size		= 1;
+        offset		= 0x8f0021;
+    ;
+
+    memory "fuse2"
+        size		= 1;
+        offset		= 0x8f0022;
+    ;
+
+    memory "fuse4"
+        size		= 1;
+        offset		= 0x8f0024;
+    ;
+
+    memory "fuse5"
+        size		= 1;
+        offset		= 0x8f0025;
+    ;
+
+    memory "lock"
+        size		= 1;
+        offset		= 0x8f0027;
+    ;
+;
+
 
 #------------------------------------------------------------
 # AVR32UC3A0512
