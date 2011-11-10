@@ -393,7 +393,7 @@ static int usbdev_recv_frame(union filedescriptor *fd, unsigned char *buf, size_
   do
     {
       rv = usb_bulk_read(udev, fd->usb.ep, usbbuf,
-			 USBDEV_MAX_XFER, 100000);
+			 USBDEV_MAX_XFER, 1000);
       if (rv < 0)
 	{
 	  if (verbose > 1)
